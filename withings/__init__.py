@@ -196,7 +196,7 @@ class WithingsMeasureGroup(WithingsObject):
     MEASURE_TYPES = (('weight', 1), ('height', 4), ('fat_free_mass', 5),
                      ('fat_ratio', 6), ('fat_mass_weight', 8),
                      ('diastolic_blood_pressure', 9), ('systolic_blood_pressure', 10),
-                     ('heart_pulse', 11))
+                     ('heart_pulse', 11),('spo2',54))
 
     def __init__(self, data):
         super(WithingsMeasureGroup, self).__init__(data)
@@ -229,6 +229,7 @@ class WithingsSleep(WithingsObject):
     def __init__(self, data):
         super(WithingsSleep, self).__init__(data)
         self.series = [WithingsSleepSeries(series) for series in self.series]
+        #TODO wie bei measures measuretypes einfüen
 
 class WithingsIntradayActivitySeries(WithingsObject):
     def __init__(self, time,data,):
