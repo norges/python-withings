@@ -90,7 +90,7 @@ class WithingsAuth(object):
 
 
 class WithingsApi(object):
-    URL = 'http://wbsapi.withings.net'
+    URL = 'https://wbsapi.withings.net'
 
     def __init__(self, credentials):
         self.credentials = credentials
